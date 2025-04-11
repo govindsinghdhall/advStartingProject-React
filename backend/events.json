@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"Hackathon","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-M_r7bEyuBQzUODeKwobumjZ2bnoB_uelw&s","date":"2025-04-17","description":"Ha ck at hon","id":"e7473c17-ad79-442c-b28f-54b635251ada"},{"title":"Baisakhi!!!","image":"https://www.vedantu.com/seo/blog-images/blog/baisakhi-festival/3559ff42-5d36-4e58-bef9-d4bcfa76eb4b","date":"2025-04-13","description":"Happy Baisakhi","id":"56e8c9d8-0c96-403b-93c3-29015abdabce"},{"title":"IPL","image":"https://bsmedia.business-standard.com/_media/bs/img/article/2025-03/21/full/1742541661-0017.jpg?im=FeatureCrop,size=(826,465)","date":"2025-04-11","description":"New IPL 2025","id":"8e0b3369-2de6-4550-b861-580c1745d14f"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
