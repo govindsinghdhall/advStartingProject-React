@@ -4,36 +4,44 @@ import {useLoaderData} from 'react-router-dom';
 
 function EventsPage () {
   const data = useLoaderData ();
+  console.log('Raw loader data:', useLoaderData());
+
 
   if (data.isError) {
     return <p>{data.message}</p>;
   }
-  const events = data.events;
+//   const events = data.events;
 
-  return <EventsList events={events} />;
+  return <EventsList events={data.events} />;
 }
 
 export default EventsPage;
 
-export async function loader () {
-  // Can use any javascript browser functions
-  // localStorage
-  // cookies
-  // can't use React Hooks
+async function loadEvents() {
+    const response = await fetch ('http://localhost:8080/events');
 
-  const response = await fetch ('http://localhost:8080/events');
-
-  if (!response.ok) {
-    // return {isError: true, message: 'Could not fetch events.'};
-    throw new Response (JSON.stringify ({message: 'Could not fetch events.'}), {
-      status: 500,
-    });
-    
-  } else {
-    // const resData = await response.json ();
-    return response;
-  }
+    if (!response.ok) {
+      // return {isError: true, message: 'Could not fetch events.'};
+      throw new Response (JSON.stringify ({message: 'Could not fetch events.'}), {
+        status: 500,
+      });
+      
+    } else {
+      // const resData = await response.json ();
+      return response;
+    }
 }
+
+export async function loader () {
+    return {
+        events: loadEvents()
+    }
+    
+}
+// Can use any javascript browser functions
+// localStorage
+// cookies
+// can't use React Hooks
 
 // return resData.events;
 // const res = new Response ('any data', {status: 201}); // response constructor
